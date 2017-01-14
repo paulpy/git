@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="siviras">
+	
+		<class>model.Auditoria</class>
+		<class>model.Calle</class>
+		<class>model.CambioPieza</class>
+		<class>model.CausaCambioEstado</class>
+		<class>model.Ciudad</class>
+		<class>model.Contrato</class>
+		<class>model.Dependencia</class>
+		<class>model.Direccion</class>
+		<class>model.Entidad</class>
+		<class>model.Equipo</class>
+		<class>model.EstadoEquipo</class>
+		<class>model.Funcionario</class>
+		<class>model.HistoricoEquipoEstado</class>
+		<class>model.HistoricoRaspberryEstado</class>
+		<class>model.Mantenimiento</class>
+		<class>model.Persona</class>
+		<class>model.Pieza</class>
+		<class>model.Raspberry</class>
+		<class>model.Rol</class>
+		<class>model.Usuario</class>
+		<class>model.UsuarioRole</class>
+		
+		<properties>
+		        <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+		        <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+		        <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/siviras"/>
+		        <property name="javax.persistence.jdbc.user" value="postgres"/>
+		        <property name="javax.persistence.jdbc.password" value="destruccion"/>
+		        <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+		</properties>
+	</persistence-unit>
+</persistence>

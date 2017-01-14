@@ -1,0 +1,43 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Monitorizacion</ui:define>
+	<ui:define name="titulo2">Raspberrys</ui:define>
+	<ui:define name="cuerpo">
+		<h:form id="mainForm">
+			<p:panel id="panelmonitorizacionraspoberrys"
+				header="Monitorizacion Raspoberrys" style="text-align:center">
+				<p:dataTable id="monitorizacionraspoberrys"
+					emptyMessage="No se encontro ningun raspoberrys a monitorear"
+					paginator="true" paginatorPosition="bottom" rows="30">
+					<p:column style="width: 180px; text-align: center"
+						headerText="Serie Raspberry">
+						<h:outputText value="1" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center"
+						headerText="Nombre Raspberry">
+						<h:outputText value="1" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center" headerText="IP">
+						<h:outputText value="Asuncion" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center"
+						headerText="Equipo Asignado">
+						<h:outputText value="1" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center"
+						headerText="Estado">
+						<h:outputText value="Corriendo" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center"
+						headerText="Trabajo">
+						<h:outputText value="Trabajos" />
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,25 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Procesos Empresariales</ui:define>
+	<ui:define name="titulo2">Entidad</ui:define>
+	<ui:define name="cuerpo">
+		<h:form id="mainForm">
+			<p:panel id="panelprocesosempresarialesclientesentidad"
+				header="Entidad">
+				<p:panel header="Nueva Entidad" style="margin-bottom:20px">
+					<h:panelGrid columns="2" cellpadding="10">
+						<h:outputText value="Entidad: " />
+						<p:inputText />
+						<h:outputText value="Estado Entidad: " />
+						<p:inputSwitch value="Checked" />
+					</h:panelGrid>
+				</p:panel>
+				<p:commandButton value="Agregar Entidad" title="Agregar Entidad" />
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

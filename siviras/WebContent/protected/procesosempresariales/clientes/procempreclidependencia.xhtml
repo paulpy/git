@@ -1,0 +1,67 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Procesos Empresariales</ui:define>
+	<ui:define name="titulo2">Dependencia</ui:define>
+	<ui:define name="cuerpo">
+		<h:form id="mainForm">
+			<p:panel id="panelprocesosempresarialesclientesentidad"
+				header="Entidad">
+				<p:panel header="Nueva Entidad" style="margin-bottom:20px">
+					<h:panelGrid columns="2" cellpadding="10" title="Dependencia">
+						<h:outputText value="Nombre dependencia: " />
+						<p:inputText />
+						<h:outputText value="Entidad: " />
+						<p:selectOneMenu id="listentidad" style="width:125px">
+							<f:selectItem itemLabel="Select One" itemValue="" />
+							<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+							<f:selectItem itemLabel="PS4" itemValue="PS4" />
+							<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+						</p:selectOneMenu>
+						<h:outputText value="Estado Dependencia: " />
+						<p:inputSwitch value="Checked" />
+					</h:panelGrid>
+					<h:panelGrid columns="2" cellpadding="10" title="Direccion">
+						<h:outputText value="Calle 1: " />
+						<p:selectOneMenu id="listcalle1" style="width:125px">
+							<f:selectItem itemLabel="Select One" itemValue="" />
+							<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+							<f:selectItem itemLabel="PS4" itemValue="PS4" />
+							<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+						</p:selectOneMenu>
+						<h:outputText value="Calle 2: " />
+						<p:selectOneMenu id="listcalle2" style="width:125px">
+							<f:selectItem itemLabel="Select One" itemValue="" />
+							<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+							<f:selectItem itemLabel="PS4" itemValue="PS4" />
+							<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+						</p:selectOneMenu>
+						<h:outputText value="Calle 3: " />
+						<p:selectOneMenu id="listcalle3" style="width:125px">
+							<f:selectItem itemLabel="Select One" itemValue="" />
+							<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+							<f:selectItem itemLabel="PS4" itemValue="PS4" />
+							<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+						</p:selectOneMenu>
+						<h:outputText value="Ciudad: " />
+						<p:selectOneMenu id="listciudad" style="width:125px">
+							<f:selectItem itemLabel="Select One" itemValue="" />
+							<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+							<f:selectItem itemLabel="PS4" itemValue="PS4" />
+							<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+						</p:selectOneMenu>
+						<h:outputText value="Nro. Edificacion: " />
+						<p:inputText />
+					</h:panelGrid>
+					<!--<p:selectCheckboxMenu id="multiselectmenuequipos" value="" label="Equipos"
+                              filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+				     </p:selectCheckboxMenu>-->
+				</p:panel>
+				<p:commandButton value="Agregar Entidad" title="Agregar Entidad" />
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

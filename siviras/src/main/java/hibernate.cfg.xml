@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">destruccion</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/siviras</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+       
+        <mapping class="model.Auditoria"/>
+        <mapping class="model.Calle"/>
+        <mapping class="model.CambioPieza"/>
+        <mapping class="model.CausaCambioEstado"/>
+        <mapping class="model.Ciudad"/>
+        <mapping class="model.Contrato"/>
+        <mapping class="model.Dependencia"/>
+        <mapping class="model.Direccion"/>
+        <mapping class="model.Entidad"/>
+        <mapping class="model.Equipo"/>
+        <mapping class="model.EstadoEquipo"/>
+        <mapping class="model.Funcionario"/>
+        <mapping class="model.HistoricoEquipoEstado"/>
+        <mapping class="model.HistoricoRaspberryEstado"/>
+        <mapping class="model.Mantenimiento"/>
+        <mapping class="model.Persona"/>
+        <mapping class="model.Pieza"/>
+        <mapping class="model.Raspberry"/>
+        <mapping class="model.Rol"/>
+        <mapping class="model.Usuario"/>
+        <mapping class="model.UsuarioRole"/>
+    </session-factory>
+</hibernate-configuration>

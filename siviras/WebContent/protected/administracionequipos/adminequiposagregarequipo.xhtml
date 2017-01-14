@@ -1,0 +1,33 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Equipos</ui:define>
+	<ui:define name="titulo2">Agregar Equipos</ui:define>
+	<ui:define name="cuerpo">
+		<h:form>
+		<p:growl id="message" showDetail="true" />
+			<p:panel id="adminequipoagregarequipo" header="Agregar Equipo"
+				style="margin-bottom:20px">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText value="Serie Equipo: " />
+					<p:inputText />
+					<h:outputText value="Fecha Ingreso: " />
+					<p:calendar id="mask" pattern="dd-MM-yyyy" mask="true" />
+					<h:outputText value="Raspberry Asignado: " />
+					<p:selectOneMenu id="listaraspberry" style="width:125px">
+						<f:selectItem itemLabel="Select One" itemValue="" />
+						<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+						<f:selectItem itemLabel="PS4" itemValue="PS4" />
+						<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+					</p:selectOneMenu>
+					<h:outputText value="Equipo Activo: " />
+					<p:inputSwitch value="Checked" />
+				</h:panelGrid>
+				<p:commandButton value="Agregar Eauipo" title="Agregar Equipo" actionListener="#{dialogosVistas.dialogoAgregarEquipo}" update="message"/>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

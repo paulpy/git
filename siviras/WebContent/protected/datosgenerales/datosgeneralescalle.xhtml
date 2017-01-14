@@ -1,0 +1,22 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Datos Generales</ui:define>
+	<ui:define name="titulo2">Agregar Calle</ui:define>
+	<ui:define name="cuerpo">
+		<f:metadata>
+			<f:event listener="#{calleBean.init()}" type="preRenderView"/>
+		</f:metadata>
+		<h:form id="mainForm">
+		<p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+			<p:panel header="Agregar Nueva Calle" style="margin-bottom:20px">
+				<h:outputText value="Calle: " />
+				<p:inputText id="calcalle" value="#{calleBean.calle.callCalle}" required="true"/>
+				<p:commandButton value="Agregar Calle" title="Agregar Calle" actionListener="#{calleBean.insertarCalle()}" update="growl"/>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

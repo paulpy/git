@@ -1,0 +1,18 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Datos Generales</ui:define>
+	<ui:define name="titulo2">Agregar Ciudad</ui:define>
+	<ui:define name="cuerpo">
+		<h:form id="mainForm">
+			<p:panel header="Agregar Estado Equipo" style="margin-bottom:20px">
+				<h:outputText value="Nuevo Estado Equipo: " />
+				<p:inputText />
+				<p:commandButton value="Agregar Estado" title="Agregar Estado" />
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,48 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Procesos Equipos</ui:define>
+	<ui:define name="titulo2">Cambios de Piezas</ui:define>
+	<ui:define name="cuerpo">
+		<h:form>
+			<p:panel id="panelcambiopieza" header="Cambio de Pieza">
+				<h:panelGrid columns="3" cellpadding="2">
+					<p:panel header="Informacion del Cambio" style="margin-bottom:20px">
+						<h:panelGrid columns="2" cellpadding="3">
+							<h:outputText value="Fecha de Cambio " />
+							<p:calendar id="mask" pattern="dd-MM-yyyy" mask="true" />
+							<h:outputText value="Funcionario: " />
+							<p:selectOneMenu id="idfuncionario" style="width:125px">
+								<f:selectItem itemLabel="Select One" itemValue="" />
+								<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+								<f:selectItem itemLabel="PS4" itemValue="PS4" />
+								<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+							</p:selectOneMenu>
+							<h:outputText value="Equipo: " />
+							<p:selectOneMenu id="idequipo" style="width:125px">
+								<f:selectItem itemLabel="Select One" itemValue="" />
+								<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+								<f:selectItem itemLabel="PS4" itemValue="PS4" />
+								<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+							</p:selectOneMenu>
+							<h:outputText value="Pieza Cambiada: " />
+							<p:selectOneMenu id="idpieza" style="width:125px">
+								<f:selectItem itemLabel="Select One" itemValue="" />
+								<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+								<f:selectItem itemLabel="PS4" itemValue="PS4" />
+								<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+							</p:selectOneMenu>
+							<h:outputText value="Observacion: " />
+							<p:inputTextarea rows="6" cols="33" />
+						</h:panelGrid>
+					</p:panel>
+				</h:panelGrid>
+				<p:commandButton value="Guardar Cambio de Pieza"
+					title="Guardar Cambio" />
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

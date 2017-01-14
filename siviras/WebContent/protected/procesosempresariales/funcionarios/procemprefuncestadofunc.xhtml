@@ -1,0 +1,36 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Procesos Empresariales</ui:define>
+	<ui:define name="titulo2">Estado Funcionario</ui:define>
+	<ui:define name="cuerpo">
+		<h:form id="mainForm">
+			<p:panel id="panellistadofuncestado"
+				header="Listado Estados Funcionarios" style="text-align:center">
+				<p:dataTable id="listadoestadosequipo"
+					emptyMessage="No se encontraron Funcionarios" paginator="true"
+					paginatorPosition="bottom" rows="30">
+					<p:column style="width: 180px; text-align: center"
+						headerText="Nombre Funcionario">
+						<h:outputText value="1" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center"
+						headerText="Apellido Funcionario">
+						<h:outputText value="Corriendo" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center"
+						headerText="Área Funcionario">
+						<h:outputText value="Corriendo" />
+					</p:column>
+					<p:column style="width: 180px; text-align: center"
+						headerText="Estado Funcionario">
+						<h:outputText value="Corriendo" />
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

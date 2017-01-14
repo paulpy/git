@@ -1,0 +1,29 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Equipos</ui:define>
+	<ui:define name="titulo2">Estado Raspberry</ui:define>
+	<ui:define name="cuerpo">
+		<h:form id="mainForm">
+			<p:panel id="panelestadosraspberrys" header="Estados Usuarios" style="text-align:center">
+				<p:dataTable id="estadosraspberrysdatatable" emptyMessage="No se encontraron raspberrys" paginator="true" paginatorPosition="bottom" rows="30">
+					<p:column style="width: 180px; text-align: center" headerText="Identificador">
+						<h:outputText value="Admin"/>					
+					</p:column>
+					<p:column style="width: 180px; text-align: center" headerText="IP Raspberry">
+						<h:outputText value="Conectado"/>					
+					</p:column>
+					<p:column style="width: 180px; text-align: center" headerText="Ultimo Evento">
+						<h:outputText value="Si"/>					
+					</p:column>
+					<p:column style="width: 180px; text-align: center" headerText="Cambiar Habilitacion">
+						<p:inputSwitch value="Checked" />
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

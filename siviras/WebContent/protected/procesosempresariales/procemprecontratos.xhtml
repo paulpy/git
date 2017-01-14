@@ -1,0 +1,44 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Procesos Empresariales</ui:define>
+	<ui:define name="titulo2">Contratos</ui:define>
+	<ui:define name="cuerpo">
+		<h:form>
+			<p:panel id="panelcontratos" header="Agregar Contrato">
+				<h:panelGrid columns="3" cellpadding="2">
+					<p:panel header="Informacion Contrato" style="margin-bottom:20px">
+						<h:panelGrid columns="2" cellpadding="5">
+							<h:outputText value="Funcionario Encargado " />
+							<p:selectOneMenu id="encargado" style="width:125px">
+								<f:selectItem itemLabel="Select One" itemValue="" />
+								<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+								<f:selectItem itemLabel="PS4" itemValue="PS4" />
+								<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+							</p:selectOneMenu>
+							<h:outputText value="Entidad Contratadora: " />
+							<p:selectOneMenu id="contratadora" style="width:125px">
+								<f:selectItem itemLabel="Select One" itemValue="" />
+								<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+								<f:selectItem itemLabel="PS4" itemValue="PS4" />
+								<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+							</p:selectOneMenu>
+							<h:outputText value="Fecha Inicio Contrato: " />
+							<p:calendar id="mask1" pattern="dd-MM-yyyy" mask="true" />
+							<h:outputText value="Fecha Final Contrato: " />
+							<p:calendar id="mask" pattern="dd-MM-yyyy" mask="true" />
+							<h:outputText value="Observacion: " />
+							<p:inputTextarea rows="6" cols="33" />
+							<h:outputText value="Contrato Estado: " />
+							<p:inputSwitch value="Checked" />
+						</h:panelGrid>
+					</p:panel>
+				</h:panelGrid>
+				<p:commandButton value="Agregar Contrato" title="Agregar Contrato" />
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><ui:insert name="titulo"></ui:insert></title>
+</h:head>
+<h:body style="background-color: #F6F6F6;">
+	<div>
+		<h:form id="menuForm" enctype="multipart/form-data">
+			<p:panel id="panelacciones" style="background-color: #A9BCF5;">
+		        <h:panelGrid columns="5" >
+			        <h:link outcome="/protected/PrincipalAdmin.xhtml" title="Inicio">
+							<p:outputLabel>Sistema Veigilante Raspberry PI</p:outputLabel>
+					</h:link>
+					<p:commandButton value="Cambios en el Usuario" />
+					<p:commandButton value="Cerrar Sesión" icon="ui-icon-extlink"/>
+		            <h:outputText value="Usuario Actual: " />
+		            <h:outputText/>		            
+		        </h:panelGrid>
+		    </p:panel>
+		</h:form>
+		<h:form id="mainForm" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td class="menudespl" style="vertical-align: top; padding-top:0%; background-color: #A9BCF5; width:30%;">
+						<div>
+							<p:panelMenu style="width:100%; padding:0%; margin:0%">
+								<p:separator />
+								<p:submenu label="PFU:">
+									<p:menuitem value="Agregar Persona" icon="ui-icon-person"/>
+									<p:menuitem value="Modificar Persona" icon="ui-icon-pencil"/>
+									<p:menuitem value="Agregar Persona-Funcionario" icon="ui-icon-person"/>
+									<p:menuitem value="Agregar Funcionario" icon="ui-icon-person"/>
+									<p:menuitem value="Modificar Funcionario" icon="ui-icon-pencil"/>
+									<p:menuitem value="Agregar Funcionario-Usuario" icon="ui-icon-calculator"/>
+									<p:menuitem value="Agregar Usuario" icon="ui-icon-calculator"/>
+									<p:menuitem value="Modificar Usuario" icon="ui-icon-pencil"/>
+								</p:submenu>
+								<p:separator />
+								<p:submenu label="Trabajos:">
+									<p:submenu label="Piezas">
+										<p:menuitem value="Ingreso de Pieza" icon="ui-icon-arrowthickstop-1-s"/>
+										<p:menuitem value="Nueva Pieza" icon="ui-icon-plus"/>
+									</p:submenu>
+									<p:submenu label="Actividades">
+										<p:menuitem value="Cambio de Pieza" icon="ui-icon-wrench"/>
+										<p:menuitem value="Buscar Pieza" icon="ui-icon-search"/>
+										<p:menuitem value="Mantenimiento" icon="ui-icon-circle-check"/>
+										<p:menuitem value="Buscar Mantenimiento" icon="ui-icon-search"/>
+									</p:submenu>
+								</p:submenu>
+								<p:separator />
+								<p:submenu label="Datos Generales:">
+									<p:submenu label="Datos Reloj-Rasp">
+										<p:menuitem value="Agregar Causa" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Causa" icon="ui-icon-pencil"/>
+										<p:menuitem value="Agregar Estado" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Estado" icon="ui-icon-pencil"/>
+										<p:menuitem value="Agregar Accion" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Accion" icon="ui-icon-pencil"/>
+									</p:submenu>
+									<p:submenu label="Localidades">
+										<p:menuitem value="Agregar Ciudad" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Ciudad" icon="ui-icon-pencil"/>
+										<p:menuitem value="Agregar Calle" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Calle" icon="ui-icon-pencil"/>
+									</p:submenu>
+								</p:submenu>
+								<p:separator />
+								<p:submenu label="Relojes:">
+									<p:menuitem value="Visualizar de Relojes" icon="ui-icon-clipboard"/>
+									<p:submenu label="Informacion Reloj">
+										<p:menuitem value="Agregar Reloj" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Reloj" icon="ui-icon-pencil"/>
+										<p:menuitem value="Buscar Reloj" icon="ui-icon-search"/>
+									</p:submenu>
+									<p:submenu label="Raspberrys">
+										<p:menuitem value="Agregar Raspberry" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Raspberry" icon="ui-icon-pencil"/>
+										<p:menuitem value="Buscar Raspberrys" icon="ui-icon-search"/>
+									</p:submenu>
+									<p:submenu label="Sub-Programas">
+										<p:menuitem value="Agregar Sub-Programa" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Sub-Programas" icon="ui-icon-pencil"/>
+									</p:submenu>
+								</p:submenu>
+								<p:separator />
+								<p:submenu label="Empresas:">
+									<p:submenu label="Entidades">
+										<p:menuitem value="Agregar Entidad" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Entidad" icon="ui-icon-pencil"/>
+									</p:submenu>
+									<p:submenu label="Dependencias">
+										<p:menuitem value="Agregar Dependencia" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Dependencias" icon="ui-icon-pencil"/>
+									</p:submenu>
+									<p:submenu label="Contratos">
+										<p:menuitem value="Agregar Contrato" icon="ui-icon-plus"/>
+										<p:menuitem value="Modificar Contratos" icon="ui-icon-pencil"/>
+									</p:submenu>
+								</p:submenu>
+								<p:separator />
+								<p:submenu label="Informaciones:">
+									<p:menuitem value="Auditoria" icon="ui-icon-document"/>
+									<p:menuitem value="Comunicaciones" icon="ui-icon-transferthick-e-w"/>
+									<p:menuitem value="Historico Acciones" icon="ui-icon-document-b"/>
+								</p:submenu>
+								<p:submenu label="Vizualizar">
+									<p:menuitem value="Personas" icon="ui-icon-document"/>
+									<p:menuitem value="Funcionario" icon="ui-icon-document"/>
+									<p:menuitem value="Usuarios" icon="ui-icon-document"/>
+									<p:menuitem value="Camvios de Piezas" icon="ui-icon-document"/>
+									<p:menuitem value="Mantenimientos" icon="ui-icon-document"/>
+									<p:menuitem value="Causas" icon="ui-icon-document"/>
+									<p:menuitem value="Estados" icon="ui-icon-document"/>
+									<p:menuitem value="Acciones" icon="ui-icon-document"/>
+									<p:menuitem value="Ciudades" icon="ui-icon-document"/>
+									<p:menuitem value="Calles" icon="ui-icon-document"/>
+									<p:menuitem value="Relojes" icon="ui-icon-document"/>
+									<p:menuitem value="Raspberrys" icon="ui-icon-document"/>
+									<p:menuitem value="Entidades" icon="ui-icon-document"/>
+									<p:menuitem value="Dependendas" icon="ui-icon-document"/>
+									<p:menuitem value="Contratos" icon="ui-icon-document"/>
+								</p:submenu>
+							</p:panelMenu>
+						</div>
+					</td>
+					<td style="min-width: 660px; vertical-align: top; max-width: 100%;">
+						<ui:insert name="cuerpo" />
+					</td>
+				</tr>
+			</table>
+		</h:form>
+	</div>
+</h:body>
+</html>

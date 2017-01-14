@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<h:body>
+	<div>
+		<h:form id="mainForm">
+			<p:panel id="panellistadoestadosequipo" header="Listado Estados Equipo" style="text-align:center">
+				<p:dataTable id="listadoestadosequipo" emptyMessage="No se encontraron Estados" paginator="true" paginatorPosition="bottom" rows="30">
+					<p:column style="width: 180px; text-align: center" headerText="Id Estado Equipo">
+						<h:outputText value="1"/>					
+					</p:column>
+					<p:column style="width: 180px; text-align: center" headerText="Estados Equipo">
+						<h:outputText value="Corriendo"/>					
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+		</h:form>
+	</div>
+</h:body> 
+</html>

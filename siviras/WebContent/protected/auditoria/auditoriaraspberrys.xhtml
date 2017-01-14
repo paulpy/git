@@ -1,0 +1,43 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Auditoria</ui:define>
+	<ui:define name="titulo2">Aditoria Raspberry</ui:define>
+	<ui:define name="cuerpo">
+		<h:form id="mainForm">
+			<p:panel id="panelauditoriaraspberrys" header="Auditoria Raspberrys">
+				<p:outputLabel value="Rango de fechas a auditar" />
+				<h:panelGrid columns="2" cellpadding="3">
+					<p:outputLabel for="inicioaui" value="Fecha de inicio de Auditoria" />
+					<p:calendar id="inicioaui" value="#{calendarView.date9}"
+						pattern="dd-MM-yyyy" mask="true" />
+					<p:outputLabel for="finaui" value="Fecha de final de Auditoria" />
+					<p:calendar id="finaui" value="#{calendarView.date9}"
+						pattern="dd-MM-yyyy" mask="true" />
+				</h:panelGrid>
+				<p:outputLabel value="Filtros" />
+				<h:panelGrid columns="2" cellpadding="3">
+					<p:outputLabel value="Filtro por Dependencia Asignada" />
+					<p:selectCheckboxMenu id="menudependencias"
+						value="#{checkboxView.selectedCities}" label="Dependencias"
+						filter="true" filterMatchMode="startsWith"
+						panelStyle="width:250px">
+					</p:selectCheckboxMenu>
+				</h:panelGrid>
+				<h:panelGrid columns="2" cellpadding="3">
+					<p:outputLabel value="Filtro por Identificador Raspberry" />
+					<p:selectCheckboxMenu id="menuraspberry"
+						value="#{checkboxView.selectedCities}" label="Raspberrys"
+						filter="true" filterMatchMode="startsWith"
+						panelStyle="width:250px">
+					</p:selectCheckboxMenu>
+				</h:panelGrid>
+				<p:commandButton value="Generar Reporte"
+					title="Generar reporte de Auditoria" />
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

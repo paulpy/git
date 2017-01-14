@@ -1,0 +1,28 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Equipos</ui:define>
+	<ui:define name="titulo2">Agregar Raspberry</ui:define>
+	<ui:define name="cuerpo">
+		<h:form>
+			<p:panel id="adminequipoagregarequipo" header="Agregar Equipo"
+				style="margin-bottom:20px">
+				<h:panelGrid columns="2" cellpadding="10">
+					<h:outputText value="Fecha Ingreso: " />
+					<p:calendar id="mask" pattern="dd-MM-yyyy" mask="true" />
+					<h:outputText value="Nombre Raspberry: " />
+					<p:inputText />
+					<h:outputText value="Raspbery IP: " />
+					<p:inputText />
+					<h:outputText value="Raspberry Activo: " />
+					<p:inputSwitch value="Checked" />
+				</h:panelGrid>
+				<p:commandButton value="Agregar Usuario" title="Agregar Usuario" />
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+

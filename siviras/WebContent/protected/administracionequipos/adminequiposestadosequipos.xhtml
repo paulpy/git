@@ -1,0 +1,42 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Equipos</ui:define>
+	<ui:define name="titulo2">Agregar Equipos</ui:define>
+	<ui:define name="cuerpo">
+		<div>
+			<h:form id="mainForm">
+				<p:panel id="panelestadoequipos" header="Estados Equipos"
+					style="text-align:center">
+					<p:dataTable id="estadosequiposdatatable"
+						emptyMessage="No se encontraron equipos" paginator="true"
+						paginatorPosition="bottom" rows="30">
+						<p:column style="width: 180px; text-align: center"
+							headerText="Serie Equpo">
+							<h:outputText value="Admin" />
+						</p:column>
+						<p:column style="width: 180px; text-align: center"
+							headerText="Estado">
+							<h:outputText value="Conectado" />
+						</p:column>
+						<p:column style="width: 180px; text-align: center"
+							headerText="Dependencia">
+							<h:outputText value="Si" />
+						</p:column>
+						<p:column style="width: 180px; text-align: center"
+							headerText="Ultimo Evento">
+							<h:outputText value="30-08-2016 10:35" />
+						</p:column>
+						<p:column style="width: 180px; text-align: center"
+							headerText="Cambiar Habilitacion/Estado">
+							<p:inputSwitch value="Checked" />
+						</p:column>
+					</p:dataTable>
+				</p:panel>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>

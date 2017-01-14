@@ -1,0 +1,116 @@
+<ui:composition template="/protected/main.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="titulo">Usuarios</ui:define>
+	<ui:define name="titulo2">Agregar Modificar Usuario</ui:define>
+	<ui:define name="cuerpo">
+		<h:form>
+			<p:panel id="agregarusauriodesdeperosna"
+				header="Agregar Usuario desde: " toggleable="false"
+				toggleSpeed="500" closeSpeed="500" widgetVar="panel"
+				style="margin-bottom:20px">
+				<p:accordionPanel dynamic="true" cache="true">
+					<p:tab title="Funcionario">
+						<h:panelGrid columns="3" cellpadding="2">
+							<p:panel header="Datos Persona y Funcionario"
+								style="margin-bottom:20px">
+								<h:panelGrid columns="2" cellpadding="5">
+									<h:outputText value="Nombre: " />
+									<p:inputText />
+									<h:outputText value="Apellido: " />
+									<p:inputText />
+									<h:outputText value="Numero de Cedula: " />
+									<p:inputText />
+									<h:outputText value="Fecha de Nacimiento: " />
+									<p:calendar id="mask" pattern="dd-MM-yyyy" mask="true" />
+									<h:outputText value="Sexo: " />
+									<p:inputText />
+									<h:outputText value="Area: " />
+									<p:selectOneMenu id="area" style="width:125px">
+										<f:selectItem itemLabel="Select One" itemValue="" />
+										<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+										<f:selectItem itemLabel="PS4" itemValue="PS4" />
+										<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+									</p:selectOneMenu>
+									<h:outputText value="Cargo: " />
+									<p:selectOneMenu id="cargo" style="width:125px">
+										<f:selectItem itemLabel="Select One" itemValue="" />
+										<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+										<f:selectItem itemLabel="PS4" itemValue="PS4" />
+										<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+									</p:selectOneMenu>
+								</h:panelGrid>
+							</p:panel>
+							<p:panel header="Datos Usuario" style="margin-bottom:20px">
+								<h:panelGrid columns="2" cellpadding="5">
+									<h:outputText value="Usuario: " />
+									<p:inputText />
+									<h:outputText value="Contraseña: " />
+									<p:password />
+									<h:outputText value="Confirmar Contraseña: " />
+									<p:password />
+									<h:outputText value="Usuario Activo: " />
+									<p:inputSwitch value="Checked" />
+									<h:outputText value="Usuario Tipo: " />
+									<p:selectOneMenu id="tipousuario" style="width:125px">
+										<f:selectItem itemLabel="Select One" itemValue="" />
+										<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+										<f:selectItem itemLabel="PS4" itemValue="PS4" />
+										<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+									</p:selectOneMenu>
+								</h:panelGrid>
+							</p:panel>
+						</h:panelGrid>
+						<p:commandButton value="Agregar Usuario" title="Agregar Usuario" />
+					</p:tab>
+					<p:tab title="Desde Funcionario">
+						<h:panelGrid columns="3" cellpadding="1">
+							<p:panel header="Buscar Funcionario" style="margin-bottom:20px">
+								<h:panelGrid columns="2" cellpadding="2">
+									<h:outputText value="Cedula del Funcionario: " />
+									<p:inputText />
+									<p:commandButton value="Buscar Persona" title="buscar persona" />
+								</h:panelGrid>
+							</p:panel>
+							<p:panel header="Datos Funcionario" style="margin-bottom:20px">
+								<h:panelGrid columns="2" cellpadding="2">
+									<h:outputText value="Nombre: " />
+									<h:outputText value="Cargo: " />
+									<h:outputText value="Apellido: " />
+									<h:outputText value="Cargo: " />
+									<h:outputText value="Area: " />
+									<h:outputText value="Cargo: " />
+									<h:outputText value="Cargo: " />
+									<h:outputText value="Cargo: " />
+								</h:panelGrid>
+							</p:panel>
+							<p:panel header="Datos Usuario" style="margin-bottom:20px">
+								<h:panelGrid columns="2" cellpadding="5">
+									<h:outputText value="Usuario: " />
+									<p:inputText />
+									<h:outputText value="Contraseña: " />
+									<p:password />
+									<h:outputText value="Confirmar Contraseña: " />
+									<p:password />
+									<h:outputText value="Usuario Activo: " />
+									<p:inputSwitch value="Checked" />
+									<h:outputText value="Usuario Tipo: " />
+									<p:selectOneMenu id="tipousuarioFunc" style="width:125px">
+										<f:selectItem itemLabel="Select One" itemValue="" />
+										<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+										<f:selectItem itemLabel="PS4" itemValue="PS4" />
+										<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+									</p:selectOneMenu>
+								</h:panelGrid>
+								<p:commandButton value="Agregar Usuario" title="Agregar Usuario" />
+							</p:panel>
+						</h:panelGrid>
+					</p:tab>
+				</p:accordionPanel>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

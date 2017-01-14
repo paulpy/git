@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+	<h:form>
+		<p:growl id="messages" showDetail="true" />
+		<p:tieredMenu style="width:15%" id="menuprincipal">
+			<p:submenu label="Administracion de Usuarios" icon="ui-icon-circle-plus" id="usuarioAdmin">
+				<p:menuitem value="Usuario" 
+					update="messages" icon="ui-icon-plus" id="usaurioAgregarModificar" />
+				<p:menuitem value="Estado Usuarios" 
+					update="messages" icon="ui-icon-circle-check" id="usuarioEstadoUsuario"/>
+			</p:submenu>
+			<p:submenu label="Administracion de Equipos" icon="ui-icon-contact" id="equiposAdmin">
+				<p:submenu label="Equipos" icon="ui-icon-circlesmall-close" id="equipoE">
+					<p:menuitem value="Equipos" 
+						update="messages" ajax="false" icon="ui-icon-plus" id="equipoAgregarModificar"/>
+					<p:menuitem value="Estado Equipos" 
+						update="messages" ajax="false" icon="ui-icon-circle-check" id="equipoEstado"/>
+				</p:submenu>
+				<p:submenu label="Raspberrys" icon="ui-icon-note" id="raspberrysE">
+					<p:menuitem value="Raspberrys" 
+						update="messages" ajax="false" icon="ui-icon-plus" id="raspberryAgregarModificar"/>
+					<p:menuitem value="Estado Raspberrys" 
+						update="messages" ajax="false" icon="ui-icon-circle-check" id="raspberryEstado"/>
+				</p:submenu>
+			</p:submenu>
+			<p:submenu label="Monitorizacion" icon="ui-icon-circle-zoomin" id="monitorizacion">
+				<p:menuitem value="Equipos" 
+					update="messages" ajax="false" icon="ui-icon-circlesmall-close" id="monitorizacionEquipos"/>
+				<p:menuitem value="Raspberrys" 
+					update="messages" ajax="false" icon="ui-icon-note" id="monitorizacionRaspberrys"/>
+				<!-- <p:menuitem value="SIVIRAS" 
+					update="messages" ajax="false" icon="ui-icon-contact" id="monitorizacionSIVIRAS"/> -->
+				<p:menuitem value="Usuarios" 
+					update="messages" ajax="false" icon="ui-icon-person" id="monitorizacionUsuarios"/>	
+			</p:submenu>
+			<p:submenu label="Reportes" icon="ui-icon-print" id="reportes">
+				<p:menuitem value="Equipos" 
+					update="messages" ajax="false" icon="ui-icon-circlesmall-close" id="reportesEquipos"/>
+				<p:menuitem value="Raspberrys" 
+					update="messages" ajax="false" icon="ui-icon-note" id="reportesRaspberrys"/>
+				<p:menuitem value="Sistema" 
+					update="messages" ajax="false" icon="ui-icon-contact" id="reportesSIVIRAS"/>
+				<p:menuitem value="Usuarios" 
+					update="messages" ajax="false" icon="ui-icon-person" id="reportesUsuario"/>
+			</p:submenu>
+			<p:submenu label="Auditoria" icon="ui-icon-zoomin" id="auditoria">
+				<p:menuitem value="Equipos" 
+					update="messages" ajax="false" icon="ui-icon-circlesmall-close" id="auditoriaEquipos"/>
+				<p:menuitem value="Raspberrys" 
+					update="messages" ajax="false" icon="ui-icon-note" id="auditoriaRaspberrys"/>
+				<p:menuitem value="Sistema" 
+					update="messages" ajax="false" icon="ui-icon-contact" id="auditoriaSIVIRAS"/>
+				<p:menuitem value="Usuarios" 
+					update="messages" ajax="false" icon="ui-icon-person" id="auditoriaUsuarios"/>	
+			</p:submenu>
+			<p:submenu label="Procesos Equipos" icon="ui-icon-wrench" id="procesosEqui">
+				<p:menuitem value="Mantenimientos" 
+					update="messages" ajax="false" icon="ui-icon-wrench" id="procesosEMantenimientos"/>
+				<p:menuitem value="Cambios de pieza" 
+					update="messages" ajax="false" icon="ui-icon-wrench" id="procesosECambiosdePiezas"/>
+				<p:menuitem value="Piezas" 
+					update="messages" ajax="false" icon="ui-icon-wrench" id="procesosEPiezas"/>
+			</p:submenu>
+			<p:submenu label="Procesos Empresariales" icon="ui-icon-home" id="procesosEmp">
+				<p:submenu label="Funcionarios" icon="ui-icon-person" id="procesosEmpFuncionario">
+					<p:menuitem value="Funcionario" 
+					update="messages" ajax="false" icon="ui-icon-plus" id="proceFuncionarioAgregarModificar"/>
+					<p:menuitem value="Estados Funcionarios" 
+					update="messages" ajax="false" icon="ui-icon-circle-check" id="proceFuncionarioEstados"/>
+				</p:submenu>
+				<p:menuitem value="Contratos" 
+					update="messages" ajax="false" icon="ui-icon-document" id="procesosEmpContratos"/>
+				<p:submenu label="Clientes" icon="ui-icon-wrench" id="procesosEmpClientes">
+					<p:menuitem value="Entidades" 
+						update="messages" ajax="false" icon="ui-icon-plus" id="procesosEmpEntidadAgregarModificar"/>
+					<p:menuitem value="Dependencias"
+						update="messages" ajax="false" icon="ui-icon-plus" id="procesosEmpDependenciasAgregarModificar"/>
+					<p:menuitem value="Estado Cliente"
+						update="messages" ajax="false" icon="ui-icon-circle-check" id="procesosEmpEstadoCliente"/>
+				</p:submenu>
+			</p:submenu>
+			<p:submenu label="Datos Generales" icon="ui-icon-pencil" id="datosgenerales">
+				<p:menuitem value="Ciudades" 
+					update="messages" ajax="false" icon="ui-icon-plus" id="datosgeneralesCiudad"/>
+				<p:menuitem value="Calles" 
+					update="messages" ajax="false" icon="ui-icon-copy" id="datosgeneralesCalles"/>
+				<p:menuitem value="Estados Equipos" 
+					update="messages" ajax="false" icon="ui-icon-circlesmall-close" id="datosgeneralesEstados"/>
+				<p:menuitem value="Cambios Estados" 
+					update="messages" ajax="false" icon="ui-icon-carat-2-n-s" id="datosgeneralesCausas"/>
+			</p:submenu>
+		</p:tieredMenu>
+	</h:form>
+</h:body>
+</html>
